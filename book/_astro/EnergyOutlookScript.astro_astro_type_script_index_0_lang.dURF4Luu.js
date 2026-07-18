@@ -1,0 +1,1 @@
+import{t as e}from"./src.DGpq463z.js";e();
