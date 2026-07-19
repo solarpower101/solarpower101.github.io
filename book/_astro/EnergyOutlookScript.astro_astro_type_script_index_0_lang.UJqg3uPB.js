@@ -1,0 +1,1 @@
+import{n as e}from"./src.DFmVIk2l.js";e();
