@@ -1,0 +1,410 @@
+<!DOCTYPE html><!--SGpfd2g5xptvis8HAxezQ--><html lang="en" class="__variable_4ba4aa __variable_8b3a0b"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/af4bf8399d1aacdf-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/8f7ca10cd6a51064.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-27f0d98167585b94.js"/><script src="/_next/static/chunks/87c73c54-24122e7b92478d00.js" async=""></script><script src="/_next/static/chunks/18-0f8e207599b7e2be.js" async=""></script><script src="/_next/static/chunks/main-app-c7a330a6248a2a6c.js" async=""></script><script src="/_next/static/chunks/app/layout-10815806e95950d4.js" async=""></script><script src="/_next/static/chunks/app/error-11b37b50e7a2700f.js" async=""></script><script src="/_next/static/chunks/75504863-dcfd30679a60775a.js" async=""></script><script src="/_next/static/chunks/737-d1b63895ee5cc27a.js" async=""></script><script src="/_next/static/chunks/664-6d821dc1aacb6b48.js" async=""></script><script src="/_next/static/chunks/328-280a7582cc122e21.js" async=""></script><script src="/_next/static/chunks/836-741c67d39b023081.js" async=""></script><script src="/_next/static/chunks/201-496a16b46c8cec4d.js" async=""></script><script src="/_next/static/chunks/480-70a4a3d00878eca6.js" async=""></script><script src="/_next/static/chunks/app/solar/calculator/page-ac430ec55c6ed025.js" async=""></script><meta name="next-size-adjust" content=""/><title>SolarPower101 — Learn. Choose. Save.</title><meta name="description" content="Plain-language solar guidance for homeowners: learn what matters, prepare for installer conversations, and request a clear project review."/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><header class="site-header"><div class="header-inner"><a class="brand-link" href="/">SolarPower101</a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span class="menu-icon"></span></button><nav class="nav-group" aria-label="Primary"><a href="/learn/" class="nav-link">Learn</a><a href="/installers/" class="nav-link">Installers</a><a href="/solar/" class="nav-link active" aria-current="page">Solar tools</a><a href="/ask/" class="nav-link">Ask</a><a href="/quotes/" class="nav-link">Quotes</a><a href="/onboarding/" class="nav-link">Account</a><a class="button-link secondary" href="/#inquiry-form-title">Start review</a></nav></div></header><!--$--><main class="shell"><nav class="solar-breadcrumb"><a href="/solar/">← Solar tools</a></nav><section class="learning-hero" aria-labelledby="calculator-title"><div><p class="eyebrow">Electrical planning</p><h1 id="calculator-title">Load calculator</h1><p class="lede">Estimate your home&#x27;s electrical demand, size a solar system, see itemized costs, and project your savings over 25 years.</p></div><aside class="learning-note" aria-label="About this tool"><strong>How it works</strong><span>The calculation follows a standard residential load method: 3 VA per sq ft for general lighting and receptacles, plus appliance and HVAC loads. Results are planning estimates, not engineering design.</span></aside></section><div class="account-save-banner" style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--line);background:var(--surface);margin-bottom:24px;font-size:0.95rem;color:var(--text);display:flex;align-items:center;gap:10px"><span>💡</span><span><strong>Have an account?</strong> Signed-in homeowners can save their system sizing, ROI estimates, and battery backup calculations directly to their homeowner profile.</span></div><div class="load-calc"><section class="calc-section"><div class="calc-step-header"><span class="calc-step-badge">1</span><h2 class="calc-step-title">Home size</h2></div><div class="calc-card"><label class="calc-label">Living area</label><div class="calc-inline-row"><input aria-label="Living area" class="calc-input" placeholder="e.g. 2000" style="flex:1" type="number" value="2000"/><select aria-label="Area unit" class="calc-select"><option value="sqft" selected="">sq ft</option><option value="sqm">sq m</option></select></div><p class="calc-helper">General lighting is estimated at 3 VA per sq ft, plus 2 kitchen circuits (3,000 VA) and 1 laundry circuit (1,500 VA).</p></div><button class="calc-primary" type="button">Pick appliances</button></section><style>
+.load-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 18px 0;
+}
+.calc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.calc-step-header {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+.calc-step-badge {
+  align-items: center;
+  background: var(--sun);
+  border-radius: 50%;
+  color: var(--teal-dark);
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+.calc-step-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.calc-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+}
+.calc-label {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0;
+}
+.calc-helper {
+  color: var(--subtle);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.calc-input {
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 10px 14px;
+  transition: border-color 0.15s;
+}
+.calc-input:focus {
+  border-color: var(--teal);
+  outline: none;
+}
+.calc-input-sm {
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  width: 70px;
+}
+.calc-select {
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  flex: 0 0 auto;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 10px 8px;
+  transition: border-color 0.15s;
+  min-width: 72px;
+  width: auto;
+}
+.calc-select:focus {
+  border-color: var(--teal);
+  outline: none;
+}
+.calc-input-xs {
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  text-align: center;
+  width: 50px;
+}
+.calc-primary {
+  align-items: center;
+  background: var(--teal);
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-raised);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 28px;
+  transition: all 0.15s;
+}
+.calc-primary:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+.calc-secondary {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 24px;
+  transition: all 0.15s;
+}
+.calc-secondary:hover {
+  border-color: var(--subtle);
+  color: var(--ink);
+}
+.calc-category-header {
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+.calc-category-label {
+  color: var(--ink);
+}
+.calc-expand-icon {
+  color: var(--teal);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.calc-category-items {
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+}
+.calc-appliance-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.calc-checkbox-label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  min-height: 36px;
+}
+.calc-checkbox {
+  height: 20px;
+  width: 20px;
+}
+.calc-appliance-name {
+  color: var(--ink);
+}
+.calc-appliance-fields {
+  display: flex;
+  gap: 8px;
+  padding-left: 28px;
+}
+.calc-section-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+.calc-custom-row {
+  display: flex;
+  gap: 8px;
+}
+.calc-custom-row .calc-input {
+  flex: 1;
+}
+.calc-add-btn {
+  align-items: center;
+  background: var(--teal);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+  transition: background 0.15s;
+}
+.calc-add-btn:hover {
+  background: var(--teal-dark);
+}
+.calc-custom-item-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+.calc-remove-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0;
+}
+.calc-toggle-label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  min-height: 44px;
+}
+.calc-result-eyebrow {
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.calc-result-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.calc-result-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 32px;
+}
+.calc-result-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.calc-result-value {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+}
+.calc-bold {
+  font-weight: 800;
+}
+.calc-accent {
+  color: var(--teal);
+}
+.calc-divider {
+  background: var(--line);
+  height: 1px;
+  margin: 2px 0;
+}
+.calc-inline-row {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+.calc-inline-group {
+  display: flex;
+  gap: 16px;
+}
+.calc-inline-group > div {
+  flex: 1;
+}
+.calc-roi-highlight {
+  align-items: center;
+  background: var(--sun-soft);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+  padding: 14px 18px;
+}
+.calc-roi-emoji {
+  font-size: 1.4rem;
+}
+.calc-chart {
+  align-items: flex-end;
+  display: flex;
+  gap: 4px;
+  height: 160px;
+  justify-content: center;
+  padding: 20px 0;
+}
+.calc-bar-col {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 140px;
+  justify-content: flex-end;
+  max-width: 28px;
+}
+.calc-bar {
+  background: var(--teal);
+  border-radius: 4px;
+  min-height: 4px;
+  width: 100%;
+}
+.calc-bar-breakeven {
+  background: var(--sun-deep);
+}
+.calc-bar-label {
+  color: var(--subtle);
+  font-size: 0.7rem;
+  margin-top: 4px;
+}
+.calc-chart-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.calc-legend-item {
+  align-items: center;
+  display: flex;
+  font-size: 0.8rem;
+  gap: 6px;
+  color: var(--muted);
+}
+.calc-legend-swatch {
+  border-radius: 3px;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+.calc-legend-swatch-savings {
+  background: var(--teal);
+}
+.calc-legend-swatch-breakeven {
+  background: var(--sun-deep);
+}
+.calc-disclaimer {
+  color: var(--subtle);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 12px;
+}
+.calc-reset-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+</style></div><style>
+.solar-breadcrumb {
+  margin-bottom: -12px;
+}
+.solar-breadcrumb a {
+  color: var(--teal);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.solar-breadcrumb a:hover {
+  text-decoration: underline;
+}
+</style></main><!--$--><!--/$--><!--/$--><footer class="site-footer-wrapper"><div class="site-footer"><p>© <!-- -->2026<!-- --> SolarPower101 — Independent solar guidance.</p><nav aria-label="Footer"><a href="/">Home</a><a href="/learn/">Learn</a><a href="/installers/">Installers</a><a href="/solar/">Solar tools</a><a href="/ask/">Ask</a><a href="/onboarding/">Account</a></nav></div></footer><script src="/_next/static/chunks/webpack-27f0d98167585b94.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[5702,[\"177\",\"static/chunks/app/layout-10815806e95950d4.js\"],\"Header\"]\n3:I[5341,[],\"\"]\n4:I[1869,[\"39\",\"static/chunks/app/error-11b37b50e7a2700f.js\"],\"default\"]\n5:I[25,[],\"\"]\n6:I[9664,[\"385\",\"static/chunks/75504863-dcfd30679a60775a.js\",\"737\",\"static/chunks/737-d1b63895ee5cc27a.js\",\"664\",\"static/chunks/664-6d821dc1aacb6b48.js\",\"328\",\"static/chunks/328-280a7582cc122e21.js\",\"836\",\"static/chunks/836-741c67d39b023081.js\",\"201\",\"static/chunks/201-496a16b46c8cec4d.js\",\"480\",\"static/chunks/480-70a4a3d00878eca6.js\",\"409\",\"static/chunks/app/solar/calculator/page-ac430ec55c6ed025.js\"],\"\"]\n7:I[6060,[\"385\",\"static/chunks/75504863-dcfd30679a60775a.js\",\"737\",\"static/chunks/737-d1b63895ee5cc27a.js\",\"664\",\"static/chunks/664-6d821dc1aacb6b48.js\",\"328\",\"static/chunks/328-280a7582cc122e21.js\",\"836\",\"static/chunks/836-741c67d39b023081.js\",\"201\",\"static/chunks/201-496a16b46c8cec4d.js\",\"480\",\"static/chunks/480-70a4a3d00878eca6.js\",\"409\",\"static/chunks/app/solar/calculator/page-ac430ec55c6ed025.js\"],\"LoadCalculatorForm\"]\n8:I[5104,[],\"OutletBoundary\"]\na:I[7158,[],\"AsyncMetadataOutlet\"]\nc:I[5104,[],\"ViewportBoundary\"]\nf:I[4431,[],\"\"]\n:HL[\"/_next/static/media/af4bf8399d1aacdf-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/8f7ca10cd6a51064.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"SGpfd2g5xptvis8HAxezQ\",\"p\":\"\",\"c\":[\"\",\"solar\",\"calculator\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"solar\",{\"children\":[\"calculator\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/8f7ca10cd6a51064.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"className\":\"__variable_4ba4aa __variable_8b3a0b\",\"children\":[\"$\",\"body\",null,{\"children\":[[\"$\",\"$L2\",null,{}],[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$4\",\"errorStyles\":[],\"errorScripts\":[],\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"main\",null,{\"className\":\"shell compact\",\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Error 404\"}],[\"$\",\"h1\",null,{\"children\":\"Page not found\"}],[\"$\",\"p\",null,{\"children\":\"This route is not part of the SolarPower101 foundation.\"}],[\"$\",\"div\",null,{\"className\":\"hero-actions\",\"children\":[[\"$\",\"a\",null,{\"className\":\"button-link\",\"href\":\"/\",\"children\":\"Back to home\"}],[\"$\",\"a\",null,{\"className\":\"text-link\",\"href\":\"/learn/\",\"children\":\"Learn\"}]]}]]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}],[\"$\",\"footer\",null,{\"className\":\"site-footer-wrapper\",\"children\":[\"$\",\"div\",null,{\"className\":\"site-footer\",\"children\":[[\"$\",\"p\",null,{\"children\":[\"© \",2026,\" SolarPower101 — Independent solar guidance.\"]}],[\"$\",\"nav\",null,{\"aria-label\":\"Footer\",\"children\":[[\"$\",\"a\",\"/\",{\"href\":\"/\",\"children\":\"Home\"}],[\"$\",\"a\",\"/learn/\",{\"href\":\"/learn/\",\"children\":\"Learn\"}],[\"$\",\"a\",\"/installers/\",{\"href\":\"/installers/\",\"children\":\"Installers\"}],[\"$\",\"a\",\"/solar/\",{\"href\":\"/solar/\",\"children\":\"Solar tools\"}],[\"$\",\"a\",\"/ask/\",{\"href\":\"/ask/\",\"children\":\"Ask\"}],[\"$\",\"a\",\"/onboarding/\",{\"href\":\"/onboarding/\",\"children\":\"Account\"}]]}]]}]}]]}]}]]}],{\"children\":[\"solar\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"calculator\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"main\",null,{\"className\":\"shell\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"solar-breadcrumb\",\"children\":[\"$\",\"$L6\",null,{\"href\":\"/solar/\",\"children\":\"← Solar tools\"}]}],[\"$\",\"section\",null,{\"className\":\"learning-hero\",\"aria-labelledby\":\"calculator-title\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Electrical planning\"}],[\"$\",\"h1\",null,{\"id\":\"calculator-title\",\"children\":\"Load calculator\"}],[\"$\",\"p\",null,{\"className\":\"lede\",\"children\":\"Estimate your home's electrical demand, size a solar system, see itemized costs, and project your savings over 25 years.\"}]]}],[\"$\",\"aside\",null,{\"className\":\"learning-note\",\"aria-label\":\"About this tool\",\"children\":[[\"$\",\"strong\",null,{\"children\":\"How it works\"}],[\"$\",\"span\",null,{\"children\":\"The calculation follows a standard residential load method: 3 VA per sq ft for general lighting and receptacles, plus appliance and HVAC loads. Results are planning estimates, not engineering design.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"account-save-banner\",\"style\":{\"padding\":\"14px 18px\",\"borderRadius\":\"var(--radius-md)\",\"border\":\"1px solid var(--line)\",\"background\":\"var(--surface)\",\"marginBottom\":\"24px\",\"fontSize\":\"0.95rem\",\"color\":\"var(--text)\",\"display\":\"flex\",\"alignItems\":\"center\",\"gap\":\"10px\"},\"children\":[[\"$\",\"span\",null,{\"children\":\"💡\"}],[\"$\",\"span\",null,{\"children\":[[\"$\",\"strong\",null,{\"children\":\"Have an account?\"}],\" Signed-in homeowners can save their system sizing, ROI estimates, and battery backup calculations directly to their homeowner profile.\"]}]]}],[\"$\",\"$L7\",null,{}],[\"$\",\"style\",null,{\"children\":\"\\n.solar-breadcrumb {\\n  margin-bottom: -12px;\\n}\\n.solar-breadcrumb a {\\n  color: var(--teal);\\n  font-size: 0.85rem;\\n  font-weight: 600;\\n  text-decoration: none;\\n}\\n.solar-breadcrumb a:hover {\\n  text-decoration: underline;\\n}\\n\"}]]}],null,[\"$\",\"$L8\",null,{\"children\":[\"$L9\",[\"$\",\"$La\",null,{\"promise\":\"$@b\"}]]}]]}],{},null,false]},null,false]},null,false]},[[\"$\",\"main\",\"l\",{\"className\":\"shell compact\",\"children\":[\"$\",\"section\",null,{\"className\":\"state-panel\",\"aria-live\":\"polite\",\"aria-busy\":\"true\",\"children\":[[\"$\",\"h2\",null,{\"children\":\"Loading SolarPower101\"}],[\"$\",\"p\",null,{\"children\":\"Preparing the application shell.\"}]]}]}],[],[]],false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$Lc\",null,{\"children\":\"$Ld\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]],\"$Le\"]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[5104,[],\"MetadataBoundary\"]\n11:\"$Sreact.suspense\"\ne:[\"$\",\"$L10\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$11\",null,{\"fallback\":null,\"children\":\"$L12\"}]}]}]\n"])</script><script>self.__next_f.push([1,"d:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n9:null\n"])</script><script>self.__next_f.push([1,"b:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"SolarPower101 — Learn. Choose. Save.\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Plain-language solar guidance for homeowners: learn what matters, prepare for installer conversations, and request a clear project review.\"}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"12:\"$b:metadata\"\n"])</script></body></html>
